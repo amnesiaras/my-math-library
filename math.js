@@ -2,7 +2,9 @@
 
 function sum(a, b) {
     if (Array.isArray(a)) {
-      return a.reduce((acc, n) => acc + n, 0)
+      let sum = 0
+      a.forEach((i) => (sum += i))
+      return sum
     } else if (typeof a === 'number' && typeof b === 'number') {
       return a + b
     }
